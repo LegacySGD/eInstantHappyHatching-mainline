@@ -1,0 +1,887 @@
+<Paytable>
+	<PaytableData>
+		<!-- @validation:ignore -->
+		<PaytableVariation name="Variation">
+			<Variation>
+				<SoftwareId>300-2058-103</SoftwareId>
+				<PaytableStatistics type="Lottery" description="Happy Hatching" name="Happy Hatching" maxRTP="93.00" minRTP="85.00" />
+				<BetConfiguration name="ODEWager">
+					<PlayedCreditsPerSelection>1</PlayedCreditsPerSelection>
+					<PaidCreditsPerSelection>1</PaidCreditsPerSelection>
+				</BetConfiguration>
+				<ExecutionModelMapping>
+					<ExecutionModel name="Wager_Buy">
+						<Data type="Wager_Buy.ActionVerifier" name="Wager_Buy.ActionVerifier" />
+						<Data type="Wager_Buy.ODEInputVerifier.Wager" name="Wager_Buy.ODEInputVerifier.Wager" />
+						<Data type="Wager_Buy.ODEInputVerifier.JSON" name="Wager_Buy.ODEInputVerifier.JSON" />
+						<Data type="Wager_Buy.StaticTriggerProcessor" name="Wager_Buy.StaticTriggerProcessor" />
+						<Data type="Wager_Buy.LoopProcessor" name="Wager_Buy.LoopProcessor" />
+						<Data type="Wager_Buy.StageProcessor" name="Wager_Buy.StageProcessor" />
+						<Data type="Wager_Buy.AdvancedTransactionProcessor" name="Wager_Buy.AdvancedTransactionProcessor" />
+					</ExecutionModel>
+					<ExecutionModel name="Wager_Try">
+						<Data type="Wager_Try.ActionVerifier" name="Wager_Try.ActionVerifier" />
+						<Data type="Wager_Try.ODEInputVerifier.Wager" name="Wager_Try.ODEInputVerifier.Wager" />
+						<Data type="Wager_Try.ODEInputVerifier.JSON" name="Wager_Try.ODEInputVerifier.JSON" />
+						<Data type="Wager_Try.RandomRequest.DivisionSelection" name="Wager_Try.RandomRequest.DivisionSelection" />
+						<Data type="Wager_Try.RandomRequest.ScenarioPerDivision" name="Wager_Try.RandomRequest.ScenarioPerDivision" />
+						<Data type="Wager_Try.RandomResponse.DivisionSelection" name="Wager_Try.RandomResponse.DivisionSelection" />
+						<Data type="Wager_Try.RandomResponse.ScenarioPerDivision" name="Wager_Try.RandomResponse.ScenarioPerDivision" />
+						<Data type="Wager_Try.OutcomeDeepCopyProcessor.ODEOutcome" name="Wager_Try.OutcomeDeepCopyProcessor.ODEOutcome" />
+						<Data type="Wager_Try.PopulationTriggerProcessor" name="Wager_Try.PopulationTriggerProcessor" />
+						<Data type="Wager_Try.BulkGameDataStoreProcessor" name="Wager_Try.BulkGameDataStoreProcessor" />
+						<Data type="Wager_Try.ODEPrizeProcessor" name="Wager_Try.ODEPrizeProcessor" />
+						<Data type="Wager_Try.StaticTriggerProcessor" name="Wager_Try.StaticTriggerProcessor" />
+						<Data type="Wager_Try.StageProcessor" name="Wager_Try.StageProcessor" />
+						<Data type="Wager_Try.AdvancedTransactionProcessor" name="Wager_Try.AdvancedTransactionProcessor" />
+					</ExecutionModel>
+					<ExecutionModel name="Scenario">
+						<Data type="Scenario.RandomRequest.DivisionSelection" name="Scenario.RandomRequest.DivisionSelection" />
+						<Data type="Scenario.RandomRequest.ScenarioPerDivision" name="Scenario.RandomRequest.ScenarioPerDivision" />
+						<Data type="Scenario.RandomResponse.DivisionSelection" name="Scenario.RandomResponse.DivisionSelection" />
+						<Data type="Scenario.RandomResponse.ScenarioPerDivision" name="Scenario.RandomResponse.ScenarioPerDivision" />
+						<Data type="Scenario.OutcomeDeepCopyProcessor.ODEOutcome" name="Scenario.OutcomeDeepCopyProcessor.ODEOutcome" />
+						<Data type="Scenario.PopulationTriggerProcessor" name="Scenario.PopulationTriggerProcessor" />
+						<Data type="Scenario.BulkGameDataStoreProcessor" name="Scenario.BulkGameDataStoreProcessor" />
+						<Data type="Scenario.ODEPrizeProcessor" name="Scenario.ODEPrizeProcessor" />
+						<Data type="Game.AwardCapProcessor" name="AwardCapProcessor"/>
+						<Data type="Scenario.AdvancedTransactionProcessor" name="Scenario.AdvancedTransactionProcessor" />
+					</ExecutionModel>
+					<ExecutionModel name="Reveal">
+						<Data type="Reveal.ODEInputVerifier" name="Reveal.ODEInputVerifier" />
+						<Data type="Reveal.ODEInputVerifier.RevealData" name="Reveal.ODEInputVerifier.RevealData" />
+						<Data type="Reveal.StageProcessor" name="Reveal.StageProcessor" />
+						<Data type="Reveal.AdvancedTransactionProcessor" name="Reveal.AdvancedTransactionProcessor" />
+					</ExecutionModel>
+				</ExecutionModelMapping>
+			</Variation>
+		</PaytableVariation>
+	</PaytableData>
+	<PaytableData>
+		<ComponentsDataMapping>
+			<!-- START EXECUTION MODEL Wager_Buy ComponentData -->
+			<ComponentData name="Wager_Buy.ActionVerifier">
+				<Data name="TryBuyActions" type="ActionInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Buy.ODEInputVerifier.Wager">
+				<Data name="Wager_Buy.Wager" type="ODEInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Buy.ODEInputVerifier.JSON">
+				<Data name="Wager_Buy.JSON" type="ODEInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Buy.StaticTriggerProcessor">
+				<Data name="Wager_Buy.StaticTriggers" type="TriggerInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Buy.LoopProcessor">
+				<Data name="Wager_Buy.Loop" type="TriggerInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Buy.StageProcessor">
+				<Data name="Wager_Buy" type="StageTriggerInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Buy.AdvancedTransactionProcessor">
+				<Data name="Wager_Buy" type="WagerStrategyInfo" />
+			</ComponentData>
+			<!-- END EXECUTION MODEL Wager_Buy ComponentData -->
+			<!-- START EXECUTION MODEL Wager_Try ComponentData -->
+			<ComponentData name="Wager_Try.ActionVerifier">
+				<Data name="TryBuyActions" type="ActionInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.ODEInputVerifier.Wager">
+				<Data name="Wager_Try.Wager" type="ODEInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.ODEInputVerifier.JSON">
+				<Data name="Wager_Try.JSON" type="ODEInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.RandomRequest.DivisionSelection">
+				<Data name="DivisionSelection" type="PopulationInfo" />
+				<Data name="DivisionSelection" type="PopulationStripMapping" />
+				<Data name="PricePointStripMappings" type="KeyValuePairInfo" />
+				<Data name="DivisionSelection50" type="StripInfo" />
+				<Data name="DivisionSelection100" type="StripInfo" />
+				<Data name="DivisionSelection200" type="StripInfo" />
+				<Data name="DivisionSelection300" type="StripInfo" />
+				<Data name="DivisionSelection500" type="StripInfo" />
+				<Data name="DivisionSelection1000" type="StripInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.RandomRequest.ScenarioPerDivision">
+				<Data name="ScenarioPerDivision" type="PopulationInfo" />
+				<Data name="ScenarioPerDivision" type="PopulationStripMapping" />
+				<Data name="ScenarioPerDivision" type="StripInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.RandomResponse.DivisionSelection">
+				<Data name="DivisionSelection" type="PopulationInfo" />
+				<Data name="DivisionSelection" type="PopulationStripMapping" />
+				<Data name="PricePointStripMappings" type="KeyValuePairInfo" />
+				<Data name="DivisionSelection50" type="StripInfo" />
+				<Data name="DivisionSelection100" type="StripInfo" />
+				<Data name="DivisionSelection200" type="StripInfo" />
+				<Data name="DivisionSelection300" type="StripInfo" />
+				<Data name="DivisionSelection500" type="StripInfo" />
+				<Data name="DivisionSelection1000" type="StripInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.RandomResponse.ScenarioPerDivision">
+				<Data name="ScenarioPerDivision" type="PopulationInfo" />
+				<Data name="ScenarioPerDivision" type="PopulationStripMapping" />
+				<Data name="ScenarioPerDivision" type="StripInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.OutcomeDeepCopyProcessor.ODEOutcome">
+				<Data name="Wager_Try" type="DeepCopyInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.PopulationTriggerProcessor">
+				<Data name="DivisionSelection" type="PopulationTriggerInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.BulkGameDataStoreProcessor">
+				<Data name="BulkGameDataStoreInfo" type="BulkGameDataStoreInfo" />
+				<Data name="DivisionToScenarioMappings" type="KeyValuePairInfo" />
+				<Data name="PrizeStructure" type="InstantWinPrizeInfo" />
+				<Data name="Variation" type="PaytableVariation" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.ODEPrizeProcessor">
+				<Data name="ODE" type="PrizeInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.StaticTriggerProcessor">
+				<Data name="Wager_Try.StaticTriggers" type="TriggerInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.StageProcessor">
+				<Data name="Wager_Try" type="StageTriggerInfo" />
+			</ComponentData>
+			<ComponentData name="Wager_Try.AdvancedTransactionProcessor">
+				<Data name="Wager_Try" type="WagerStrategyInfo" />
+			</ComponentData>
+			<!-- END EXECUTION MODEL Wager_Try ComponentData -->
+			<!-- START EXECUTION MODEL Scenario ComponentData -->
+			<ComponentData name="Scenario.RandomRequest.DivisionSelection">
+				<Data name="DivisionSelection" type="PopulationInfo" />
+				<Data name="DivisionSelection" type="PopulationStripMapping" />
+				<Data name="PricePointStripMappings" type="KeyValuePairInfo" />
+				<Data name="DivisionSelection50" type="StripInfo" />
+				<Data name="DivisionSelection100" type="StripInfo" />
+				<Data name="DivisionSelection200" type="StripInfo" />
+				<Data name="DivisionSelection300" type="StripInfo" />
+				<Data name="DivisionSelection500" type="StripInfo" />
+				<Data name="DivisionSelection1000" type="StripInfo" />
+			</ComponentData>
+			<ComponentData name="Scenario.RandomRequest.ScenarioPerDivision">
+				<Data name="ScenarioPerDivision" type="PopulationInfo" />
+				<Data name="ScenarioPerDivision" type="PopulationStripMapping" />
+				<Data name="ScenarioPerDivision" type="StripInfo" />
+			</ComponentData>
+			<ComponentData name="Scenario.RandomResponse.DivisionSelection">
+				<Data name="DivisionSelection" type="PopulationInfo" />
+				<Data name="DivisionSelection" type="PopulationStripMapping" />
+				<Data name="PricePointStripMappings" type="KeyValuePairInfo" />
+				<Data name="DivisionSelection50" type="StripInfo" />
+				<Data name="DivisionSelection100" type="StripInfo" />
+				<Data name="DivisionSelection200" type="StripInfo" />
+				<Data name="DivisionSelection300" type="StripInfo" />
+				<Data name="DivisionSelection500" type="StripInfo" />
+				<Data name="DivisionSelection1000" type="StripInfo" />
+			</ComponentData>
+			<ComponentData name="Scenario.RandomResponse.ScenarioPerDivision">
+				<Data name="ScenarioPerDivision" type="PopulationInfo" />
+				<Data name="ScenarioPerDivision" type="PopulationStripMapping" />
+				<Data name="ScenarioPerDivision" type="StripInfo" />
+			</ComponentData>
+			<ComponentData name="Scenario.OutcomeDeepCopyProcessor.ODEOutcome">
+				<Data name="Scenario" type="DeepCopyInfo" />
+			</ComponentData>
+			<ComponentData name="Scenario.PopulationTriggerProcessor">
+				<Data name="DivisionSelection" type="PopulationTriggerInfo" />
+			</ComponentData>
+			<ComponentData name="Scenario.BulkGameDataStoreProcessor">
+				<Data name="BulkGameDataStoreInfo" type="BulkGameDataStoreInfo" />
+				<Data name="DivisionToScenarioMappings" type="KeyValuePairInfo" />
+				<Data name="PrizeStructure" type="InstantWinPrizeInfo" />
+				<Data name="Variation" type="PaytableVariation" />
+			</ComponentData>
+			<ComponentData name="Scenario.ODEPrizeProcessor">
+				<Data name="ODE" type="PrizeInfo" />
+			</ComponentData>
+			<ComponentData name="AwardCapProcessor">
+				<Data name="AwardCapInfo" type="AwardCapInfo"/>
+			</ComponentData>
+			<ComponentData name="Scenario.AdvancedTransactionProcessor">
+				<Data name="Scenario" type="WagerStrategyInfo" />
+			</ComponentData>
+			<!-- END EXECUTION MODEL Scenario ComponentData -->
+			<!-- START EXECUTION MODEL Reveal ComponentData -->
+			<ComponentData name="Reveal.ODEInputVerifier">
+				<Data name="Reveal.Status" type="ODEInfo" />
+			</ComponentData>
+			<ComponentData name="Reveal.ODEInputVerifier.RevealData">
+				<Data name="Reveal.RevealData" type="ODEInfo" />
+			</ComponentData>
+			<ComponentData name="Reveal.StageProcessor">
+				<Data name="Reveal" type="StageTriggerInfo" />
+			</ComponentData>
+			<ComponentData name="Reveal.AdvancedTransactionProcessor">
+				<Data name="Reveal" type="WagerStrategyInfo" />
+			</ComponentData>
+			<!-- END EXECUTION MODEL Reveal ComponentData -->
+		</ComponentsDataMapping>
+	</PaytableData>
+	<!-- START EXECUTION MODEL Wager_Buy PaytableData -->
+	<PaytableData>
+		<ODEInfo name="Wager_Buy.Wager" verificationStrategy="wager">
+			<Wagers>
+				<Wager name="Wager1" />
+			</Wagers>
+		</ODEInfo>
+	</PaytableData>
+	<PaytableData>
+		<ODEInfo name="Wager_Buy.JSON" verificationStrategy="json" />
+	</PaytableData>
+	<PaytableData>
+		<TriggerInfo name="Wager_Buy.StaticTriggers">
+			<Trigger name="wager" />
+		</TriggerInfo>
+	</PaytableData>
+	<PaytableData>
+		<TriggerInfo name="Wager_Buy.Loop">
+			<Trigger name="wager" />
+		</TriggerInfo>
+	</PaytableData>
+	<PaytableData>
+		<StageTriggerInfo name="Wager_Buy">
+			<Trigger name="wager" stageConnector="WagerToScenario" />
+		</StageTriggerInfo>
+	</PaytableData>
+	<PaytableData>
+		<WagerStrategyInfo name="Wager_Buy">
+			<Trigger name="wager" wagerState="pending" payoutState="noPayout" priority="0" />
+		</WagerStrategyInfo>
+	</PaytableData>
+	<!-- END EXECUTION MODEL Wager_Buy PaytableData -->
+	<!-- START EXECUTION MODEL Wager_Try PaytableData -->
+	<PaytableData>
+		<ActionInfo name="TryBuyActions">
+			<Action name="TRY" />
+			<Action name="BUY" />
+			<Strategy>action</Strategy>
+		</ActionInfo>
+	</PaytableData>
+	<PaytableData>
+		<ODEInfo name="Wager_Try.Wager" verificationStrategy="wager">
+			<Wagers>
+				<Wager name="Wager1" />
+			</Wagers>
+		</ODEInfo>
+	</PaytableData>
+	<PaytableData>
+		<ODEInfo name="Wager_Try.JSON" verificationStrategy="json" />
+	</PaytableData>
+	<PaytableData>
+		<DeepCopyInfo name="Wager_Try">
+			<DeepCopy type="JSONOutcome" sourceName="ODEResponse.Encrypted" destinationName="ODEResponse" />
+		</DeepCopyInfo>
+	</PaytableData>
+	<PaytableData>
+		<TriggerInfo name="Wager_Try.StaticTriggers">
+			<Trigger name="wager" />
+		</TriggerInfo>
+	</PaytableData>
+	<PaytableData>
+		<StageTriggerInfo name="Wager_Try">
+			<Trigger name="wager" stageConnector="WagerToWager" />
+		</StageTriggerInfo>
+	</PaytableData>
+	<PaytableData>
+		<WagerStrategyInfo name="Wager_Try">
+			<Trigger name="wager" wagerState="settled" payoutState="payout" priority="0" />
+		</WagerStrategyInfo>
+	</PaytableData>
+	<!-- END EXECUTION MODEL Wager_Try PaytableData -->
+	<!-- START EXECUTION MODEL Scenario PaytableData -->
+	<PaytableData>
+		<PopulationInfo name="DivisionSelection" uniqueRandoms="false" randomRequestStrategy="triggerReelsetSwitch" populateStrategy="triggerReelsetSwitch">
+			<Entry name="Division" stripOffset="0">
+				<Cell name="Division" layer="0" column="0" row="0" />
+			</Entry>
+		</PopulationInfo>
+	</PaytableData>
+	<PaytableData>
+		<PopulationStripMapping name="DivisionSelection">
+			<Map entry="Division" strip="Division" />
+		</PopulationStripMapping>
+	</PaytableData>
+	<PaytableData>
+		<KeyValuePairInfo name="PricePointStripMappings">
+			<Mapping key="50" value="DivisionSelection50" />
+			<Mapping key="100" value="DivisionSelection100" />
+			<Mapping key="200" value="DivisionSelection200" />
+			<Mapping key="300" value="DivisionSelection300" />
+			<Mapping key="500" value="DivisionSelection500" />
+			<Mapping key="1000" value="DivisionSelection1000" />
+		</KeyValuePairInfo>
+	</PaytableData>
+	<PaytableData>
+		<StripInfo name="DivisionSelection50">
+			<Strip name="Division">
+				<Stop symbolID="1" weight="1" />
+				<Stop symbolID="2" weight="28" />
+				<Stop symbolID="3" weight="125" />
+				<Stop symbolID="4" weight="190" />
+				<Stop symbolID="5" weight="250" />
+				<Stop symbolID="6" weight="390" />
+				<Stop symbolID="7" weight="700" />
+				<Stop symbolID="8" weight="850" />
+				<Stop symbolID="9" weight="1000" />
+				<Stop symbolID="10" weight="1300" />
+				<Stop symbolID="11" weight="1700" />
+				<Stop symbolID="12" weight="2100" />
+				<Stop symbolID="13" weight="5000" />
+				<Stop symbolID="14" weight="10490" />
+				<Stop symbolID="15" weight="20480" />
+				<Stop symbolID="16" weight="46190" />
+				<Stop symbolID="17" weight="125310" />
+				<Stop symbolID="18" weight="183896" />
+				<Stop symbolID="19" weight="600000" />
+			</Strip>
+		</StripInfo>
+	</PaytableData>
+	<PaytableData>
+		<StripInfo name="DivisionSelection100">
+			<Strip name="Division">
+				<Stop symbolID="1" weight="1" />
+				<Stop symbolID="2" weight="61" />
+				<Stop symbolID="3" weight="266" />
+				<Stop symbolID="4" weight="386" />
+				<Stop symbolID="5" weight="546" />
+				<Stop symbolID="6" weight="932" />
+				<Stop symbolID="7" weight="1659" />
+				<Stop symbolID="8" weight="1842" />
+				<Stop symbolID="9" weight="2077" />
+				<Stop symbolID="10" weight="2607" />
+				<Stop symbolID="11" weight="3410" />
+				<Stop symbolID="12" weight="4397" />
+				<Stop symbolID="13" weight="9900" />
+				<Stop symbolID="14" weight="20938" />
+				<Stop symbolID="15" weight="41057" />
+				<Stop symbolID="16" weight="92336" />
+				<Stop symbolID="17" weight="248667" />
+				<Stop symbolID="18" weight="368918" />
+				<Stop symbolID="19" weight="1200000" />
+			</Strip>
+		</StripInfo>
+	</PaytableData>
+	<PaytableData>
+		<StripInfo name="DivisionSelection200">
+			<Strip name="Division">
+				<Stop symbolID="1" weight="1" />
+				<Stop symbolID="2" weight="50" />
+				<Stop symbolID="3" weight="215" />
+				<Stop symbolID="4" weight="295" />
+				<Stop symbolID="5" weight="415" />
+				<Stop symbolID="6" weight="700" />
+				<Stop symbolID="7" weight="1400" />
+				<Stop symbolID="8" weight="2520" />
+				<Stop symbolID="9" weight="3540" />
+				<Stop symbolID="10" weight="4560" />
+				<Stop symbolID="11" weight="5570" />
+				<Stop symbolID="12" weight="6590" />
+				<Stop symbolID="13" weight="9660" />
+				<Stop symbolID="14" weight="14280" />
+				<Stop symbolID="15" weight="17330" />
+				<Stop symbolID="16" weight="50140" />
+				<Stop symbolID="17" weight="168300" />
+				<Stop symbolID="18" weight="514434" />
+				<Stop symbolID="19" weight="1200000" />
+			</Strip>
+		</StripInfo>
+	</PaytableData>
+	<PaytableData>
+		<StripInfo name="DivisionSelection300">
+			<Strip name="Division">
+				<Stop symbolID="1" weight="1" />
+				<Stop symbolID="2" weight="59" />
+				<Stop symbolID="3" weight="257" />
+				<Stop symbolID="4" weight="394" />
+				<Stop symbolID="5" weight="555" />
+				<Stop symbolID="6" weight="873" />
+				<Stop symbolID="7" weight="1490" />
+				<Stop symbolID="8" weight="1985" />
+				<Stop symbolID="9" weight="2970" />
+				<Stop symbolID="10" weight="3667" />
+				<Stop symbolID="11" weight="4943" />
+				<Stop symbolID="12" weight="5927" />
+				<Stop symbolID="13" weight="6910" />
+				<Stop symbolID="14" weight="9864" />
+				<Stop symbolID="15" weight="12825" />
+				<Stop symbolID="16" weight="75646" />
+				<Stop symbolID="17" weight="207730" />
+				<Stop symbolID="18" weight="863904" />
+				<Stop symbolID="19" weight="1800000" />
+			</Strip>
+		</StripInfo>
+	</PaytableData>
+	<PaytableData>
+		<StripInfo name="DivisionSelection500">
+			<Strip name="Division">
+				<Stop symbolID="1" weight="1" />
+				<Stop symbolID="2" weight="64" />
+				<Stop symbolID="3" weight="249" />
+				<Stop symbolID="4" weight="329" />
+				<Stop symbolID="5" weight="449" />
+				<Stop symbolID="6" weight="748" />
+				<Stop symbolID="7" weight="1298" />
+				<Stop symbolID="8" weight="1598" />
+				<Stop symbolID="9" weight="1997" />
+				<Stop symbolID="10" weight="3493" />
+				<Stop symbolID="11" weight="4494" />
+				<Stop symbolID="12" weight="6291" />
+				<Stop symbolID="13" weight="6992" />
+				<Stop symbolID="14" weight="10006" />
+				<Stop symbolID="15" weight="20048" />
+				<Stop symbolID="16" weight="45700" />
+				<Stop symbolID="17" weight="159053" />
+				<Stop symbolID="18" weight="1337190" />
+				<Stop symbolID="19" weight="2400000" />
+			</Strip>
+		</StripInfo>
+	</PaytableData>
+	<PaytableData>
+		<StripInfo name="DivisionSelection1000">
+			<Strip name="Division">
+				<Stop symbolID="1" weight="1" />
+				<Stop symbolID="2" weight="50" />
+				<Stop symbolID="3" weight="256" />
+				<Stop symbolID="4" weight="373" />
+				<Stop symbolID="5" weight="539" />
+				<Stop symbolID="6" weight="929" />
+				<Stop symbolID="7" weight="1947" />
+				<Stop symbolID="8" weight="2523" />
+				<Stop symbolID="9" weight="3088" />
+				<Stop symbolID="10" weight="3855" />
+				<Stop symbolID="11" weight="5740" />
+				<Stop symbolID="12" weight="6670" />
+				<Stop symbolID="13" weight="8490" />
+				<Stop symbolID="14" weight="13997" />
+				<Stop symbolID="15" weight="26400" />
+				<Stop symbolID="16" weight="100660" />
+				<Stop symbolID="17" weight="145902" />
+				<Stop symbolID="18" weight="1678580" />
+				<Stop symbolID="19" weight="3000000" />
+			</Strip>
+		</StripInfo>
+	</PaytableData>
+	<PaytableData>
+		<PopulationInfo name="ScenarioPerDivision" uniqueRandoms="false" randomRequestStrategy="stripLength" populateStrategy="randomLong">
+			<Entry name="D1" stripOffset="0">
+				<Cell name="D1" layer="0" column="0" row="0" />
+			</Entry>
+			<Entry name="D2" stripOffset="0">
+				<Cell name="D2" layer="0" column="1" row="0" />
+			</Entry>
+			<Entry name="D3" stripOffset="0">
+				<Cell name="D3" layer="0" column="2" row="0" />
+			</Entry>
+			<Entry name="D4" stripOffset="0">
+				<Cell name="D4" layer="0" column="3" row="0" />
+			</Entry>
+			<Entry name="D5" stripOffset="0">
+				<Cell name="D5" layer="0" column="4" row="0" />
+			</Entry>
+			<Entry name="D6" stripOffset="0">
+				<Cell name="D6" layer="0" column="5" row="0" />
+			</Entry>
+			<Entry name="D7" stripOffset="0">
+				<Cell name="D7" layer="0" column="6" row="0" />
+			</Entry>
+			<Entry name="D8" stripOffset="0">
+				<Cell name="D8" layer="0" column="7" row="0" />
+			</Entry>
+			<Entry name="D9" stripOffset="0">
+				<Cell name="D9" layer="0" column="8" row="0" />
+			</Entry>
+			<Entry name="D10" stripOffset="0">
+				<Cell name="D10" layer="0" column="9" row="0" />
+			</Entry>
+			<Entry name="D11" stripOffset="0">
+				<Cell name="D11" layer="0" column="10" row="0" />
+			</Entry>
+			<Entry name="D12" stripOffset="0">
+				<Cell name="D12" layer="0" column="11" row="0" />
+			</Entry>
+			<Entry name="D13" stripOffset="0">
+				<Cell name="D13" layer="0" column="12" row="0" />
+			</Entry>
+			<Entry name="D14" stripOffset="0">
+				<Cell name="D14" layer="0" column="13" row="0" />
+			</Entry>
+			<Entry name="D15" stripOffset="0">
+				<Cell name="D15" layer="0" column="14" row="0" />
+			</Entry>
+			<Entry name="D16" stripOffset="0">
+				<Cell name="D16" layer="0" column="15" row="0" />
+			</Entry>
+			<Entry name="D17" stripOffset="0">
+				<Cell name="D17" layer="0" column="16" row="0" />
+			</Entry>
+			<Entry name="D18" stripOffset="0">
+				<Cell name="D18" layer="0" column="17" row="0" />
+			</Entry>
+			<Entry name="D19" stripOffset="0">
+				<Cell name="D19" layer="0" column="18" row="0" />
+			</Entry>
+		</PopulationInfo>
+	</PaytableData>
+	<PaytableData>
+		<PopulationStripMapping name="ScenarioPerDivision">
+			<Map entry="D1" strip="D1" />
+			<Map entry="D2" strip="D2" />
+			<Map entry="D3" strip="D3" />
+			<Map entry="D4" strip="D4" />
+			<Map entry="D5" strip="D5" />
+			<Map entry="D6" strip="D6" />
+			<Map entry="D7" strip="D7" />
+			<Map entry="D8" strip="D8" />
+			<Map entry="D9" strip="D9" />
+			<Map entry="D10" strip="D10" />
+			<Map entry="D11" strip="D11" />
+			<Map entry="D12" strip="D12" />
+			<Map entry="D13" strip="D13" />
+			<Map entry="D14" strip="D14" />
+			<Map entry="D15" strip="D15" />
+			<Map entry="D16" strip="D16" />
+			<Map entry="D17" strip="D17" />
+			<Map entry="D18" strip="D18" />
+			<Map entry="D19" strip="D19" />
+		</PopulationStripMapping>
+	</PaytableData>
+	<PaytableData>
+		<StripInfo name="ScenarioPerDivision">
+			<Strip name="D1">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D2">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D3">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D4">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D5">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D6">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D7">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D8">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D9">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D10">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D11">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D12">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D13">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D14">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D15">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D16">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D17">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D18">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+			<Strip name="D19">
+				<Stop symbolID="scenariosInDivision" weight="5000" />
+			</Strip>
+		</StripInfo>
+	</PaytableData>
+	<PaytableData>
+		<DeepCopyInfo name="Scenario">
+			<DeepCopy type="JSONOutcome" sourceName="ODEResponse.Encrypted" destinationName="ODEResponse" />
+		</DeepCopyInfo>
+	</PaytableData>
+	<PaytableData>
+		<PopulationTriggerInfo name="DivisionSelection" strategy="default" />
+	</PaytableData>
+	<PaytableData>
+		<BulkGameDataStoreInfo name="BulkGameDataStoreInfo" strategy="simulateOdeResponse">
+			<TableName>GDS_COM_IW_SCENARIO</TableName>
+			<EnableLocalization defaultLanguage="en">false</EnableLocalization>
+			<MathVersion>300-2058-V1</MathVersion>
+		</BulkGameDataStoreInfo>
+	</PaytableData>
+	<PaytableData>
+		<KeyValuePairInfo name="DivisionToScenarioMappings">
+			<Mapping key="1" value="D1" />
+			<Mapping key="2" value="D2" />
+			<Mapping key="3" value="D3" />
+			<Mapping key="4" value="D4" />
+			<Mapping key="5" value="D5" />
+			<Mapping key="6" value="D6" />
+			<Mapping key="7" value="D7" />
+			<Mapping key="8" value="D8" />
+			<Mapping key="9" value="D9" />
+			<Mapping key="10" value="D10" />
+			<Mapping key="11" value="D11" />
+			<Mapping key="12" value="D12" />
+			<Mapping key="13" value="D13" />
+			<Mapping key="14" value="D14" />
+			<Mapping key="15" value="D15" />
+			<Mapping key="16" value="D16" />
+			<Mapping key="17" value="D17" />
+			<Mapping key="18" value="D18" />
+			<Mapping key="19" value="D19" />
+		</KeyValuePairInfo>
+	</PaytableData>
+	<PaytableData>
+		<InstantWinPrizeInfo name="PrizeStructure">
+			<PricePoint amount="50">
+				<Prize division="1" description="1">500000</Prize>
+				<Prize division="2" description="2">10000</Prize>
+				<Prize division="3" description="3">2500</Prize>
+				<Prize division="4" description="4">2000</Prize>
+				<Prize division="5" description="5">1500</Prize>
+				<Prize division="6" description="6">1000</Prize>
+				<Prize division="7" description="7">600</Prize>
+				<Prize division="8" description="8">550</Prize>
+				<Prize division="9" description="9">500</Prize>
+				<Prize division="10" description="10">450</Prize>
+				<Prize division="11" description="11">400</Prize>
+				<Prize division="12" description="12">350</Prize>
+				<Prize division="13" description="13">300</Prize>
+				<Prize division="14" description="14">250</Prize>
+				<Prize division="15" description="15">200</Prize>
+				<Prize division="16" description="16">150</Prize>
+				<Prize division="17" description="17">100</Prize>
+				<Prize division="18" description="18">50</Prize>
+				<Prize division="19" description="19">0</Prize>
+			</PricePoint>
+			<PricePoint amount="100">
+				<Prize division="1" description="1">1000000</Prize>
+				<Prize division="2" description="2">20000</Prize>
+				<Prize division="3" description="3">5000</Prize>
+				<Prize division="4" description="4">4000</Prize>
+				<Prize division="5" description="5">3000</Prize>
+				<Prize division="6" description="6">2000</Prize>
+				<Prize division="7" description="7">1200</Prize>
+				<Prize division="8" description="8">1100</Prize>
+				<Prize division="9" description="9">1000</Prize>
+				<Prize division="10" description="10">900</Prize>
+				<Prize division="11" description="11">800</Prize>
+				<Prize division="12" description="12">700</Prize>
+				<Prize division="13" description="13">600</Prize>
+				<Prize division="14" description="14">500</Prize>
+				<Prize division="15" description="15">400</Prize>
+				<Prize division="16" description="16">300</Prize>
+				<Prize division="17" description="17">200</Prize>
+				<Prize division="18" description="18">100</Prize>
+				<Prize division="19" description="19">0</Prize>
+			</PricePoint>
+			<PricePoint amount="200">
+				<Prize division="1" description="1">2500000</Prize>
+				<Prize division="2" description="2">50000</Prize>
+				<Prize division="3" description="3">12500</Prize>
+				<Prize division="4" description="4">10000</Prize>
+				<Prize division="5" description="5">7500</Prize>
+				<Prize division="6" description="6">5000</Prize>
+				<Prize division="7" description="7">3000</Prize>
+				<Prize division="8" description="8">2700</Prize>
+				<Prize division="9" description="9">2500</Prize>
+				<Prize division="10" description="10">2200</Prize>
+				<Prize division="11" description="11">1900</Prize>
+				<Prize division="12" description="12">1700</Prize>
+				<Prize division="13" description="13">1500</Prize>
+				<Prize division="14" description="14">1200</Prize>
+				<Prize division="15" description="15">1000</Prize>
+				<Prize division="16" description="16">700</Prize>
+				<Prize division="17" description="17">500</Prize>
+				<Prize division="18" description="18">200</Prize>
+				<Prize division="19" description="19">0</Prize>
+			</PricePoint>
+			<PricePoint amount="300">
+				<Prize division="1" description="1">6000000</Prize>
+				<Prize division="2" description="2">100000</Prize>
+				<Prize division="3" description="3">25000</Prize>
+				<Prize division="4" description="4">20000</Prize>
+				<Prize division="5" description="5">15000</Prize>
+				<Prize division="6" description="6">10000</Prize>
+				<Prize division="7" description="7">6000</Prize>
+				<Prize division="8" description="8">5300</Prize>
+				<Prize division="9" description="9">5000</Prize>
+				<Prize division="10" description="10">4300</Prize>
+				<Prize division="11" description="11">3600</Prize>
+				<Prize division="12" description="12">3300</Prize>
+				<Prize division="13" description="13">3000</Prize>
+				<Prize division="14" description="14">2300</Prize>
+				<Prize division="15" description="15">2000</Prize>
+				<Prize division="16" description="16">1300</Prize>
+				<Prize division="17" description="17">1000</Prize>
+				<Prize division="18" description="18">300</Prize>
+				<Prize division="19" description="19">0</Prize>
+			</PricePoint>
+			<PricePoint amount="500">
+				<Prize division="1" description="1">15000000</Prize>
+				<Prize division="2" description="2">250000</Prize>
+				<Prize division="3" description="3">62500</Prize>
+				<Prize division="4" description="4">50000</Prize>
+				<Prize division="5" description="5">37500</Prize>
+				<Prize division="6" description="6">25000</Prize>
+				<Prize division="7" description="7">15000</Prize>
+				<Prize division="8" description="8">13000</Prize>
+				<Prize division="9" description="9">12500</Prize>
+				<Prize division="10" description="10">10500</Prize>
+				<Prize division="11" description="11">8500</Prize>
+				<Prize division="12" description="12">8000</Prize>
+				<Prize division="13" description="13">7500</Prize>
+				<Prize division="14" description="14">5500</Prize>
+				<Prize division="15" description="15">5000</Prize>
+				<Prize division="16" description="16">3000</Prize>
+				<Prize division="17" description="17">2500</Prize>
+				<Prize division="18" description="18">500</Prize>
+				<Prize division="19" description="19">0</Prize>
+			</PricePoint>
+			<PricePoint amount="1000">
+				<Prize division="1" description="1">25000000</Prize>
+				<Prize division="2" description="2">500000</Prize>
+				<Prize division="3" description="3">125000</Prize>
+				<Prize division="4" description="4">100000</Prize>
+				<Prize division="5" description="5">75000</Prize>
+				<Prize division="6" description="6">50000</Prize>
+				<Prize division="7" description="7">30000</Prize>
+				<Prize division="8" description="8">26000</Prize>
+				<Prize division="9" description="9">25000</Prize>
+				<Prize division="10" description="10">21000</Prize>
+				<Prize division="11" description="11">17000</Prize>
+				<Prize division="12" description="12">16000</Prize>
+				<Prize division="13" description="13">15000</Prize>
+				<Prize division="14" description="14">11000</Prize>
+				<Prize division="15" description="15">10000</Prize>
+				<Prize division="16" description="16">6000</Prize>
+				<Prize division="17" description="17">5000</Prize>
+				<Prize division="18" description="18">1000</Prize>
+				<Prize division="19" description="19">0</Prize>
+			</PricePoint>
+		</InstantWinPrizeInfo>
+	</PaytableData>
+	<PaytableData>
+		<!-- @validation:ignore -->
+		<!-- For use in Paytable Help generation -->
+		<InstantWinPrizeInfo name="PrizeTable">
+			<PricePoint amount="50">
+				<Prize division="1" description="A">500000</Prize>
+				<Prize division="2" description="B">10000</Prize>
+				<Prize division="3" description="C">2000</Prize>
+				<Prize division="4" description="D">1000</Prize>
+				<Prize division="5" description="E">500</Prize>
+				<Prize division="6" description="F">200</Prize>
+				<Prize division="7" description="G">100</Prize>
+				<Prize division="8" description="H">50</Prize>
+			</PricePoint>
+			<PricePoint amount="100">
+				<Prize division="1" description="A">1000000</Prize>
+				<Prize division="2" description="B">20000</Prize>
+				<Prize division="3" description="C">4000</Prize>
+				<Prize division="4" description="D">2000</Prize>
+				<Prize division="5" description="E">1000</Prize>
+				<Prize division="6" description="F">400</Prize>
+				<Prize division="7" description="G">200</Prize>
+				<Prize division="8" description="H">100</Prize>
+			</PricePoint>
+			<PricePoint amount="200">
+				<Prize division="1" description="A">2500000</Prize>
+				<Prize division="2" description="B">50000</Prize>
+				<Prize division="3" description="C">10000</Prize>
+				<Prize division="4" description="D">5000</Prize>
+				<Prize division="5" description="E">2500</Prize>
+				<Prize division="6" description="F">1000</Prize>
+				<Prize division="7" description="G">500</Prize>
+				<Prize division="8" description="H">200</Prize>
+			</PricePoint>
+			<PricePoint amount="300">
+				<Prize division="1" description="A">6000000</Prize>
+				<Prize division="2" description="B">100000</Prize>
+				<Prize division="3" description="C">20000</Prize>
+				<Prize division="4" description="D">10000</Prize>
+				<Prize division="5" description="E">5000</Prize>
+				<Prize division="6" description="F">2000</Prize>
+				<Prize division="7" description="G">1000</Prize>
+				<Prize division="8" description="H">300</Prize>
+			</PricePoint>
+			<PricePoint amount="500">
+				<Prize division="1" description="A">15000000</Prize>
+				<Prize division="2" description="B">250000</Prize>
+				<Prize division="3" description="C">50000</Prize>
+				<Prize division="4" description="D">25000</Prize>
+				<Prize division="5" description="E">12500</Prize>
+				<Prize division="6" description="F">5000</Prize>
+				<Prize division="7" description="G">2500</Prize>
+				<Prize division="8" description="H">500</Prize>
+			</PricePoint>
+			<PricePoint amount="1000">
+				<Prize division="1" description="A">25000000</Prize>
+				<Prize division="2" description="B">500000</Prize>
+				<Prize division="3" description="C">100000</Prize>
+				<Prize division="4" description="D">50000</Prize>
+				<Prize division="5" description="E">25000</Prize>
+				<Prize division="6" description="F">10000</Prize>
+				<Prize division="7" description="G">5000</Prize>
+				<Prize division="8" description="H">1000</Prize>
+			</PricePoint>
+		</InstantWinPrizeInfo>
+	</PaytableData>
+	<PaytableData>
+		<PrizeInfo name="ODE" strategy="ode" multiplierStrategy="null">
+			<Prize name="Total">
+				<PrizePay count="1" value="0" />
+			</Prize>
+		</PrizeInfo>
+	</PaytableData>
+	<PaytableData>
+		<AwardCapInfo name="AwardCapInfo">
+			<TriggerInfo name="AwardCapExceeded" priority="100" stageConnector="AwardCapToBaseGame"/>
+		</AwardCapInfo>
+	</PaytableData>
+	<PaytableData>
+		<WagerStrategyInfo name="Scenario">
+			<Trigger name="scenario" wagerState="pending" payoutState="noPayout" priority="0" />
+		</WagerStrategyInfo>
+	</PaytableData>
+	<!-- END EXECUTION MODEL Scenario PaytableData -->
+	<!-- START EXECUTION MODEL Reveal PaytableData -->
+	<PaytableData>
+		<ODEInfo name="Reveal.Status" verificationStrategy="revealStatus">
+			<RevealIncompleteTrigger>incomplete</RevealIncompleteTrigger>
+			<RevealCompleteTrigger>complete</RevealCompleteTrigger>
+		</ODEInfo>
+	</PaytableData>
+	<PaytableData>
+		<ODEInfo name="Reveal.RevealData" verificationStrategy="revealData" />
+	</PaytableData>
+	<PaytableData>
+		<StageTriggerInfo name="Reveal">
+			<Trigger name="incomplete" stageConnector="RevealToReveal" />
+			<Trigger name="complete" stageConnector="RevealToWager" />
+		</StageTriggerInfo>
+	</PaytableData>
+	<PaytableData>
+		<WagerStrategyInfo name="Reveal">
+			<Trigger name="incomplete" wagerState="pending" payoutState="noPayout" priority="50" />
+			<Trigger name="complete" wagerState="settled" payoutState="payout" priority="0" />
+		</WagerStrategyInfo>
+	</PaytableData>
+	<!-- END EXECUTION MODEL Reveal PaytableData -->
+</Paytable>

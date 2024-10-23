@@ -1,0 +1,207 @@
+{
+  "fileFormatVersion": 18,
+  "versionFromFilename": "v004",
+  "gameType": 0,
+  "gridSize": 19,
+  "revealFileSignature": [
+    -74,
+    28,
+    -62,
+    115,
+    123,
+    11,
+    -12,
+    -19,
+    80,
+    -109,
+    -94,
+    -87,
+    30,
+    29,
+    87,
+    41,
+    73,
+    127,
+    101,
+    112,
+    -86,
+    -127,
+    -97,
+    -123,
+    -8,
+    71,
+    -96,
+    85,
+    57,
+    -63,
+    -76,
+    28,
+    11,
+    -30,
+    -28,
+    48,
+    93,
+    5,
+    8,
+    23,
+    -20,
+    106,
+    87,
+    67,
+    84,
+    52,
+    -58,
+    63,
+    72,
+    -6,
+    -92,
+    31,
+    -31,
+    -119,
+    -81,
+    -29,
+    -7,
+    15,
+    -43,
+    77,
+    -66,
+    -39,
+    22,
+    13
+  ],
+  "bigEndian": false,
+  "playcardScanFlag": false,
+  "pricePoint": 300,
+  "betUnits": 1,
+  "validationUnits": 1,
+  "numberOfDivisions": 19,
+  "longGameName": "Key Number Match 3",
+  "shortGameName": "KNM05",
+  "vendorId": 1,
+  "internalAuditVendorId": 2,
+  "externalAuditVendorId": 0,
+  "gridMethod": 0,
+  "gridTrigger": 0,
+  "gridTriggerUnit": 0,
+  "prizes": [
+    {
+      "divisionValue": 6000000,
+      "tableValue": 6000000,
+      "winnerCount": 1,
+      "description": "A"
+    },
+    {
+      "divisionValue": 100000,
+      "tableValue": 100000,
+      "winnerCount": 1,
+      "description": "B"
+    },
+    {
+      "divisionValue": 25000,
+      "tableValue": 20000,
+      "winnerCount": 1,
+      "description": "C"
+    },
+    {
+      "divisionValue": 20000,
+      "tableValue": 10000,
+      "winnerCount": 1,
+      "description": "D"
+    },
+    {
+      "divisionValue": 15000,
+      "tableValue": 5000,
+      "winnerCount": 1,
+      "description": "E"
+    },
+    {
+      "divisionValue": 10000,
+      "tableValue": 2000,
+      "winnerCount": 1,
+      "description": "F"
+    },
+    {
+      "divisionValue": 6000,
+      "tableValue": 1000,
+      "winnerCount": 1,
+      "description": "G"
+    },
+    {
+      "divisionValue": 5300,
+      "tableValue": 300,
+      "winnerCount": 1,
+      "description": "H"
+    },
+    {
+      "divisionValue": 5000,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 4300,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 3600,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 3300,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 3000,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 2300,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 2000,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 1300,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 1000,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 300,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    },
+    {
+      "divisionValue": 0,
+      "tableValue": 0,
+      "winnerCount": 1,
+      "description": " "
+    }
+  ],
+  "siteId": 254,
+  "prizeDescriptionLength": 1,
+  "gameGroupNumber": 0,
+  "kenoSpotCount": 0,
+  "kenoMultiplier": false
+}
